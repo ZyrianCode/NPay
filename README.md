@@ -8,24 +8,26 @@ Originally maded by devmentors.
 
 Reviewed by Zelender.
 
-Architecture and some code, wrongs details refactored by Zelender.
+Architecture and some code refactored and fixed by Zelender.
 
-Fixed: 
-Dependencies
 
-Commands and Queries composed to one files with Handlers for better manipulations.
+## Fixes: 
 
-Architecture missed layers was added.
++Dependencies
 
-Some files was moved to new layers.
++Commands and Queries composed to one files with Handlers for better manipulations.
 
-Added Roots as markers for friend assemblies (In future that will be new system for managing routes).
++Architecture missed layers was added.
 
-Renamed some bad names.
++Some files was moved to new layers.
 
-Decoupled some layers.
++Added Roots as markers for friend assemblies (In future that will be new system for managing routes).
 
-All Extensions now working properly.
++Renamed some bad names.
+
++Decoupled some layers.
+
++All Extensions now working properly.
 
 **How to start the solution?**
 ----------------
