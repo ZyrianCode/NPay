@@ -12,7 +12,7 @@ using NPay.Shared.Time;
 
 namespace NPay.Modules.Wallets.Application.Wallets.Commands;
 
-public class AddFunds
+public sealed class AddFunds
 {
     public record Command(Guid WalletId, decimal Amount) : ICommand;
 

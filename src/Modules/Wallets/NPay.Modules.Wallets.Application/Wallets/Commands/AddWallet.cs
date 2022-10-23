@@ -11,7 +11,7 @@ using NPay.Shared.Time;
 
 namespace NPay.Modules.Wallets.Application.Wallets.Commands;
 
-public class AddWallet
+public sealed class AddWallet
 {
     public record Command(Guid OwnerId, string Currency) : ICommand
     {

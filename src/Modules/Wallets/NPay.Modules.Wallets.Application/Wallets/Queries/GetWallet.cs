@@ -7,7 +7,7 @@ using NPay.Shared.Queries;
 
 namespace NPay.Modules.Wallets.Application.Wallets.Queries;
 
-public class GetWallet
+public sealed class GetWallet
 {
     public class Query : IQuery<WalletDto>
     {

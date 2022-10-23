@@ -11,7 +11,7 @@ using NPay.Shared.Time;
 
 namespace NPay.Modules.Wallets.Application.Wallets.Commands;
 
-public class TransferFunds
+public sealed class TransferFunds
 {
     public record Command(Guid FromWalletId, Guid ToWalletId, decimal Amount) : ICommand;
 
