@@ -10,7 +10,7 @@ using NPay.Shared.Time;
 
 namespace NPay.Modules.Wallets.Application.Owners.Commands;
 
-internal sealed class AddOwner
+public sealed class AddOwner
 {
     public record Command(string Email) : ICommand;
 
