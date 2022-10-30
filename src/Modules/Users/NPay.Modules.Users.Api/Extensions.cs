@@ -3,8 +3,6 @@ using Microsoft.Extensions.DependencyInjection;
 using NPay.Modules.Users.Api.Modules;
 using NPay.Modules.Users.Core;
 using NPay.Modules.Users.Data;
-using NPay.Modules.Users.Services;
-
 
 namespace NPay.Modules.Users.Api;
 
@@ -14,7 +12,6 @@ public static class Extensions
     {
         services.AddCoreLayer();
         services.AddDataLayer();
-        services.AddServicesLayer();
         services.AddApi();
         return services;
     }

@@ -8,7 +8,6 @@
     <ProjectReference Include="..\NPay.Modules.Users.Core.Abstractions\NPay.Modules.Users.Core.Abstractions.csproj" />
     <ProjectReference Include="..\NPay.Modules.Users.Core\NPay.Modules.Users.Core.csproj" />
     <ProjectReference Include="..\NPay.Modules.Users.Data\NPay.Modules.Users.Data.csproj" />
-    <ProjectReference Include="..\NPay.Modules.Users.Services\NPay.Modules.Users.Services.csproj" />
   </ItemGroup>
 
 </Project>

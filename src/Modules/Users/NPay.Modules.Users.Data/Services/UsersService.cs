@@ -9,7 +9,7 @@ using NPay.Modules.Users.Shared.Events;
 using NPay.Shared.Messaging;
 using NPay.Shared.Time;
 
-namespace NPay.Modules.Users.Services.Services;
+namespace NPay.Modules.Users.Data.Services;
 
 internal sealed class UsersService : IUsersService
 {

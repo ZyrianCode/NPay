@@ -37,8 +37,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NPay.Shared", "src\Shared\N
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NPay.Modules.Notifications.Shared", "src\Modules\Notifications\NPay.Modules.Notifications.Shared\NPay.Modules.Notifications.Shared.csproj", "{EDFFD275-60CD-4AC3-B8DB-0CBDC833E0CF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NPay.Modules.Users.Services", "src\Modules\Users\NPay.Modules.Users.Services\NPay.Modules.Users.Services.csproj", "{8A541426-C9F8-4A66-9740-D74A6C6173CC}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NPay.Modules.Users.Core.Abstractions", "src\Modules\Users\NPay.Modules.Users.Core.Abstractions\NPay.Modules.Users.Core.Abstractions.csproj", "{84C7A067-0F4A-456D-B622-32CCCA6F0E42}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NPay.Modules.Wallets.Core.Abstractions", "src\Modules\Wallets\NPay.Modules.Wallets.Core.Abstractions\NPay.Modules.Wallets.Core.Abstractions.csproj", "{7B1E7602-7ECF-4E65-8536-DC3E0F5E40BD}"
@@ -49,11 +47,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NPay.Modules.Wallets.Data",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NPay.Modules.Users.Data", "src\Modules\Users\NPay.Modules.Users.Data\NPay.Modules.Users.Data.csproj", "{53E7D704-6428-4768-9429-A9D8058B1180}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NPay.Modules.Notifications.Core.Abstractions", "src\Modules\Notifications\NPay.Modules.Notifications.Core.Abstractions\NPay.Modules.Notifications.Core.Abstractions.csproj", "{5768190A-1229-4922-85DE-C734881EFDCF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NPay.Modules.Notifications.Core.Abstractions", "src\Modules\Notifications\NPay.Modules.Notifications.Core.Abstractions\NPay.Modules.Notifications.Core.Abstractions.csproj", "{5768190A-1229-4922-85DE-C734881EFDCF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NPay.Modules.Notifications.Application", "src\Modules\Notifications\NPay.Modules.Notifications.Application\NPay.Modules.Notifications.Application.csproj", "{1404E127-735B-43CF-9E29-69B22EB8EE55}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NPay.Modules.Notifications.Application", "src\Modules\Notifications\NPay.Modules.Notifications.Application\NPay.Modules.Notifications.Application.csproj", "{1404E127-735B-43CF-9E29-69B22EB8EE55}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NPay.Modules.Notifications.Core", "src\Modules\Notifications\NPay.Modules.Notifications.Core\NPay.Modules.Notifications.Core.csproj", "{14FF7C8C-356C-413B-BBC5-0B3FC8E46CC5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NPay.Modules.Notifications.Core", "src\Modules\Notifications\NPay.Modules.Notifications.Core\NPay.Modules.Notifications.Core.csproj", "{14FF7C8C-356C-413B-BBC5-0B3FC8E46CC5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -197,18 +195,6 @@ Global
 		{EDFFD275-60CD-4AC3-B8DB-0CBDC833E0CF}.Release|x64.Build.0 = Release|Any CPU
 		{EDFFD275-60CD-4AC3-B8DB-0CBDC833E0CF}.Release|x86.ActiveCfg = Release|Any CPU
 		{EDFFD275-60CD-4AC3-B8DB-0CBDC833E0CF}.Release|x86.Build.0 = Release|Any CPU
-		{8A541426-C9F8-4A66-9740-D74A6C6173CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8A541426-C9F8-4A66-9740-D74A6C6173CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8A541426-C9F8-4A66-9740-D74A6C6173CC}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{8A541426-C9F8-4A66-9740-D74A6C6173CC}.Debug|x64.Build.0 = Debug|Any CPU
-		{8A541426-C9F8-4A66-9740-D74A6C6173CC}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{8A541426-C9F8-4A66-9740-D74A6C6173CC}.Debug|x86.Build.0 = Debug|Any CPU
-		{8A541426-C9F8-4A66-9740-D74A6C6173CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8A541426-C9F8-4A66-9740-D74A6C6173CC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8A541426-C9F8-4A66-9740-D74A6C6173CC}.Release|x64.ActiveCfg = Release|Any CPU
-		{8A541426-C9F8-4A66-9740-D74A6C6173CC}.Release|x64.Build.0 = Release|Any CPU
-		{8A541426-C9F8-4A66-9740-D74A6C6173CC}.Release|x86.ActiveCfg = Release|Any CPU
-		{8A541426-C9F8-4A66-9740-D74A6C6173CC}.Release|x86.Build.0 = Release|Any CPU
 		{84C7A067-0F4A-456D-B622-32CCCA6F0E42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{84C7A067-0F4A-456D-B622-32CCCA6F0E42}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84C7A067-0F4A-456D-B622-32CCCA6F0E42}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -324,7 +310,6 @@ Global
 		{1F18212C-20D6-4AFD-A64B-5917BB37BCE9} = {6811A758-296C-49FF-A2DD-7A5EB3799E0D}
 		{B3DD62E9-B9E2-4088-8700-415B011590A4} = {2EBB0D23-40E6-4664-8C20-D6E37718D15E}
 		{EDFFD275-60CD-4AC3-B8DB-0CBDC833E0CF} = {4F23B6D4-C6A3-44E2-829C-E6EC01D130CF}
-		{8A541426-C9F8-4A66-9740-D74A6C6173CC} = {3D538A52-DE28-4079-AEE1-F8A992753E38}
 		{84C7A067-0F4A-456D-B622-32CCCA6F0E42} = {3D538A52-DE28-4079-AEE1-F8A992753E38}
 		{7B1E7602-7ECF-4E65-8536-DC3E0F5E40BD} = {6811A758-296C-49FF-A2DD-7A5EB3799E0D}
 		{0A42F614-C60F-40EC-8CDA-AA9F1EB511AA} = {6811A758-296C-49FF-A2DD-7A5EB3799E0D}
