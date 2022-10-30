@@ -2,5 +2,5 @@
 
 internal interface IEmailResolver
 {
-    string GetForOwner(Guid ownerId);
+    internal string GetForOwner(Guid ownerId);
 }

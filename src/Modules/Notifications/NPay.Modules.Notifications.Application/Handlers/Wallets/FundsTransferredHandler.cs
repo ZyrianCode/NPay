@@ -15,7 +15,7 @@ internal sealed class FundsTransferredHandler : IEventHandler<FundsTransferred>
         _emailResolver = emailResolver;
     }
 
-    public Task HandleAsync(FundsTransferred @event, CancellationToken cancellationToken = default)
+    Task IEventHandler<FundsTransferred>.HandleAsync(FundsTransferred @event, CancellationToken cancellationToken)
         => Task.WhenAll(_emailSender.SendAsync(_emailResolver.GetForOwner(@event.FromWalletId), "funds_deducted"),
             _emailSender.SendAsync(_emailResolver.GetForOwner(@event.ToWalletId), "funds_added"));
 }

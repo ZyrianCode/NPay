@@ -13,6 +13,6 @@ internal sealed class NotificationsModuleApi : INotificationsModuleApi
         _emailSender = emailSender;
     }
 
-    public Task SendEmailAsync(string receiver, string template)
+    Task INotificationsModuleApi.SendEmailAsync(string receiver, string template)
         => _emailSender.SendAsync(receiver, template);
 }

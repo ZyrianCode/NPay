@@ -30,7 +30,7 @@ internal sealed class UserVerifiedHandler : IEventHandler<UserVerified>
         _logger = logger;
     }
 
-    public async Task HandleAsync(UserVerified @event, CancellationToken cancellationToken = default)
+    async Task IEventHandler<UserVerified>.HandleAsync(UserVerified @event, CancellationToken cancellationToken)
     {
         var now = _clock.CurrentDate();
         var currency = _currencyResolver.Resolve(@event.Nationality);

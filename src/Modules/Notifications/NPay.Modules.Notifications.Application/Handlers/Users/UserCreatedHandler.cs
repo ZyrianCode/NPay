@@ -13,6 +13,6 @@ internal sealed class UserCreatedHandler : IEventHandler<UserCreated>
         _emailSender = emailSender;
     }
 
-    public Task HandleAsync(UserCreated @event, CancellationToken cancellationToken = default)
+    Task IEventHandler<UserCreated>.HandleAsync(UserCreated @event, CancellationToken cancellationToken)
         => _emailSender.SendAsync(@event.Email, "account_created");
 }

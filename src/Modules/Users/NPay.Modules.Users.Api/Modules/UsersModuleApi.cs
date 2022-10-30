@@ -15,7 +15,7 @@ internal sealed class UsersModuleApi : IUsersModuleApi
         _usersService = usersService;
     }
 
-    public Task<UserDetailsDto> GetUserAsync(Guid userId) => _usersService.GetAsync(userId);
-        
-    public Task<UserDetailsDto> GetUserAsync(string email) => _usersService.GetAsync(email);
+    Task<UserDetailsDto> IUsersModuleApi.GetUserAsync(Guid userId) => _usersService.GetAsync(userId);
+
+    Task<UserDetailsDto> IUsersModuleApi.GetUserAsync(string email) => _usersService.GetAsync(email);
 }

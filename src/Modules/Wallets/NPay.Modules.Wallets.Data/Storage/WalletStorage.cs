@@ -18,7 +18,7 @@ internal sealed class WalletStorage : IWalletStorage
         _wallets = dbContext.Wallets;
     }
 
-    public Task<Wallet> FindAsync(Expression<Func<Wallet, bool>> expression)
+    Task<Wallet> IWalletStorage.FindAsync(Expression<Func<Wallet, bool>> expression)
         => _wallets
             .AsNoTracking()
             .AsQueryable()

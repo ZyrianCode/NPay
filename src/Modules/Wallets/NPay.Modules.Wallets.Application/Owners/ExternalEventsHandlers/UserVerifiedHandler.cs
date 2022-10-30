@@ -27,7 +27,7 @@ internal sealed class UserVerifiedHandler : IEventHandler<UserVerified>
         _logger = logger;
     }
 
-    public async Task HandleAsync(UserVerified @event, CancellationToken cancellationToken = default)
+    async Task IEventHandler<UserVerified>.HandleAsync(UserVerified @event, CancellationToken cancellationToken)
     {
         var owner = await _ownerRepository.GetAsync(@event.UserId);
         if (owner is null)

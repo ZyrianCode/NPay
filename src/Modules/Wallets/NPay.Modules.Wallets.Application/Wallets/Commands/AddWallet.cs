@@ -34,7 +34,7 @@ public sealed class AddWallet
             _logger = logger;
         }
 
-        public async Task HandleAsync(Command command, CancellationToken cancellationToken = default)
+        async Task ICommandHandler<Command>.HandleAsync(Command command, CancellationToken cancellationToken)
         {
             var now = _clock.CurrentDate();
             var wallet = Wallet.Create(command.WalletId, command.OwnerId, command.Currency, now);

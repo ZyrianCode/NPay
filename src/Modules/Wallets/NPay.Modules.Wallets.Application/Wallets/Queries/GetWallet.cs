@@ -23,7 +23,7 @@ public sealed class GetWallet
             _storage = storage;
         }
 
-        public async Task<WalletDto> HandleAsync(Query query, CancellationToken cancellationToken = default)
+        async Task<WalletDto> IQueryHandler<Query, WalletDto>.HandleAsync(Query query, CancellationToken cancellationToken)
         {
             var wallet = await _storage.FindAsync(x => x.Id == query.WalletId);
 

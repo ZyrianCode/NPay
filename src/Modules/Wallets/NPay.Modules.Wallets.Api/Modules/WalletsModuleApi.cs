@@ -16,6 +16,6 @@ internal sealed class WalletsModuleApi : IWalletsModuleApi
         _dispatcher = dispatcher;
     }
 
-    public Task<WalletDto> GetWalletAsync(Guid walletId)
+    Task<WalletDto> IWalletsModuleApi.GetWalletAsync(Guid walletId)
         => _dispatcher.QueryAsync(new GetWallet.Query { WalletId = walletId });
 }

@@ -15,6 +15,6 @@ internal sealed class OwnerVerifiedHandler : IEventHandler<OwnerVerified>
         _emailResolver = emailResolver;
     }
 
-    public Task HandleAsync(OwnerVerified @event, CancellationToken cancellationToken = default)
+    Task IEventHandler<OwnerVerified>.HandleAsync(OwnerVerified @event, CancellationToken cancellationToken)
         => _emailSender.SendAsync(_emailResolver.GetForOwner(@event.OwnerId), "owner_verified");
 }

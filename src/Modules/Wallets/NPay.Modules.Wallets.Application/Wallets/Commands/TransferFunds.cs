@@ -31,7 +31,7 @@ public sealed class TransferFunds
             _logger = logger;
         }
 
-        public async Task HandleAsync(Command command, CancellationToken cancellationToken = default)
+        async Task ICommandHandler<Command>.HandleAsync(Command command, CancellationToken cancellationToken)
         {
             var (fromWalletId, toWalletId, amount) = command;
             var fromWallet = await _walletRepository.GetAsync(fromWalletId);

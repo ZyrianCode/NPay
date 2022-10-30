@@ -12,7 +12,7 @@ internal sealed class EmailSender : IEmailSender
         _logger = logger;
     }
 
-    public Task SendAsync(string receiver, string template)
+    Task IEmailSender.SendAsync(string receiver, string template)
     {
         // TODO: Implement an email sender
         _logger.LogInformation($"Sending an email to: '{receiver}', template: '{template}'...");

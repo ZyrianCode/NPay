@@ -30,7 +30,7 @@ public sealed class AddOwner
             _logger = logger;
         }
 
-        public async Task HandleAsync(Command command, CancellationToken cancellationToken = default)
+        async Task ICommandHandler<Command>.HandleAsync(Command command, CancellationToken cancellationToken)
         {
             var user = await _usersModuleApi.GetUserAsync(command.Email);
             if (user is null)

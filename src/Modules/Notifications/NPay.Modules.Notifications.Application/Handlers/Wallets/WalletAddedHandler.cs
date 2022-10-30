@@ -15,6 +15,6 @@ internal sealed class WalletAddedHandler : IEventHandler<WalletAdded>
         _emailResolver = emailResolver;
     }
 
-    public Task HandleAsync(WalletAdded @event, CancellationToken cancellationToken = default)
+    Task IEventHandler<WalletAdded>.HandleAsync(WalletAdded @event, CancellationToken cancellationToken)
         => _emailSender.SendAsync(_emailResolver.GetForOwner(@event.OwnerId), "wallet_added");
 }

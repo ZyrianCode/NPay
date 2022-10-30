@@ -23,7 +23,7 @@ internal sealed class UserCreatedHandler : IEventHandler<UserCreated>
         _logger = logger;
     }
 
-    public async Task HandleAsync(UserCreated @event, CancellationToken cancellationToken = default)
+    async Task IEventHandler<UserCreated>.HandleAsync(UserCreated @event, CancellationToken cancellationToken)
     {
         if (await _ownerRepository.GetAsync(@event.UserId) is not null)
         {

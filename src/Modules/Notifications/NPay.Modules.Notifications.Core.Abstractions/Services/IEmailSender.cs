@@ -2,5 +2,5 @@
 
 internal interface IEmailSender
 {
-    Task SendAsync(string receiver, string template);
+    internal Task SendAsync(string receiver, string template);
 }

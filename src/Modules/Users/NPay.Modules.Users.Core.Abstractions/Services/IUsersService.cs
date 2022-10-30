@@ -4,9 +4,9 @@ namespace NPay.Modules.Users.Core.Abstractions.Services;
 
 internal interface IUsersService
 {
-    Task<UserDetailsDto> GetAsync(Guid userId);
-    Task<UserDetailsDto> GetAsync(string email);
-    Task<IReadOnlyList<UserDto>> BrowseAsync();
-    Task AddAsync(UserDetailsDto dto);
-    Task VerifyAsync(Guid userId);
+    internal Task<UserDetailsDto> GetAsync(Guid userId);
+    internal Task<UserDetailsDto> GetAsync(string email);
+    internal Task<IReadOnlyList<UserDto>> BrowseAsync();
+    internal Task AddAsync(UserDetailsDto dto);
+    internal Task VerifyAsync(Guid userId);
 }

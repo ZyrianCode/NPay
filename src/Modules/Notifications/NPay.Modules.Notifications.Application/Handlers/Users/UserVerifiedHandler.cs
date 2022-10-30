@@ -13,6 +13,6 @@ internal sealed class UserVerifiedHandler : IEventHandler<UserVerified>
         _emailSender = emailSender;
     }
 
-    public Task HandleAsync(UserVerified @event, CancellationToken cancellationToken = default)
+    Task IEventHandler<UserVerified>.HandleAsync(UserVerified @event, CancellationToken cancellationToken)
         => _emailSender.SendAsync(@event.Email, "account_verified");
 }

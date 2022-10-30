@@ -27,7 +27,7 @@ internal sealed class UsersService : IUsersService
         _logger = logger;
     }
 
-    public async Task<UserDetailsDto> GetAsync(Guid userId)
+    async Task<UserDetailsDto> IUsersService.GetAsync(Guid userId)
     {
         var user = await _dbContext.Users.SingleOrDefaultAsync(x => x.Id == userId);
 
@@ -36,7 +36,7 @@ internal sealed class UsersService : IUsersService
         return user is null ? null : MapToDetailsDto(user);
     }
 
-    public async Task<UserDetailsDto> GetAsync(string email)
+    async Task<UserDetailsDto> IUsersService.GetAsync(string email)
     {
         // TODO: Additional email validation
         email = email?.ToLowerInvariant();
@@ -50,7 +50,7 @@ internal sealed class UsersService : IUsersService
         return user is null ? null : MapToDetailsDto(user);
     }
 
-    public async Task<IReadOnlyList<UserDto>> BrowseAsync()
+    async Task<IReadOnlyList<UserDto>> IUsersService.BrowseAsync()
     {
         var users = await _dbContext.Users.ToListAsync();
 
@@ -59,7 +59,7 @@ internal sealed class UsersService : IUsersService
         return users.Select(MapToDto).ToList();
     }
 
-    public async Task AddAsync(UserDetailsDto dto)
+    async Task IUsersService.AddAsync(UserDetailsDto dto)
     {
         var email = dto.Email.ToLowerInvariant();
         if (await _dbContext.Users.AnyAsync(x => x.Email == email))
@@ -86,7 +86,7 @@ internal sealed class UsersService : IUsersService
         _logger.LogInformation($"Created the user with ID: '{dto.UserId}'.");
     }
 
-    public async Task VerifyAsync(Guid userId)
+    async Task IUsersService.VerifyAsync(Guid userId)
     {
         var user = await _dbContext.Users.SingleOrDefaultAsync(x => x.Id == userId);
         if (user is null)
