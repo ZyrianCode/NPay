@@ -18,16 +18,16 @@ internal class OwnerRepository : IOwnerRepository
         _owners = _context.Owners;
     }
 
-    public Task<Owner> GetAsync(OwnerId id)
+    Task<Owner> IOwnerRepository.GetAsync(OwnerId id)
         => _owners.SingleOrDefaultAsync(x => x.Id.Equals(id));
 
-    public async Task AddAsync(Owner owner)
+    async Task IOwnerRepository.AddAsync(Owner owner)
     {
         await _owners.AddAsync(owner);
         await _context.SaveChangesAsync();
     }
 
-    public async Task UpdateAsync(Owner owner)
+    async Task IOwnerRepository.UpdateAsync(Owner owner)
     {
         _owners.Update(owner);
         await _context.SaveChangesAsync();

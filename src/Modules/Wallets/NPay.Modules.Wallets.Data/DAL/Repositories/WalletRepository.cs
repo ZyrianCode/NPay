@@ -18,24 +18,24 @@ internal class WalletRepository : IWalletRepository
         _context = context;
         _wallets = _context.Wallets;
     }
-        
-    public Task<Wallet> GetAsync(WalletId id)
+
+    Task<Wallet> IWalletRepository.GetAsync(WalletId id)
         => _wallets
             .Include(x => x.Transfers)
             .SingleOrDefaultAsync(x => x.Id.Equals(id));
 
-    public Task<Wallet> GetAsync(OwnerId ownerId, Currency currency)
+    Task<Wallet> IWalletRepository.GetAsync(OwnerId ownerId, Currency currency)
         => _wallets
             .Include(x => x.Transfers)
             .SingleOrDefaultAsync(x => x.OwnerId.Equals(ownerId) && x.Currency.Value.Equals(currency.Value));
 
-    public async Task AddAsync(Wallet wallet)
+    async Task IWalletRepository.AddAsync(Wallet wallet)
     {
         await _wallets.AddAsync(wallet);
         await _context.SaveChangesAsync();
     }
 
-    public async Task UpdateAsync(Wallet wallet)
+    async Task IWalletRepository.UpdateAsync(Wallet wallet)
     {
         _wallets.Update(wallet);
         await _context.SaveChangesAsync();

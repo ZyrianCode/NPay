@@ -5,7 +5,7 @@ namespace NPay.Modules.Wallets.Core.Wallets.Services;
 
 internal sealed class CurrencyResolver : ICurrencyResolver
 {
-    public Currency Resolve(Nationality nationality)
+    Currency ICurrencyResolver.Resolve(Nationality nationality)
         => nationality.Value switch
         {
             "PL" => "PLN",

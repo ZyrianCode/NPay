@@ -5,5 +5,5 @@ namespace NPay.Modules.Wallets.Core.Wallets.Services;
 
 internal interface ICurrencyResolver
 {
-    Currency Resolve(Nationality nationality);
+    internal Currency Resolve(Nationality nationality);
 }

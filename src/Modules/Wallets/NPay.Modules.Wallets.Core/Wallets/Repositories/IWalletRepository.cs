@@ -7,8 +7,8 @@ namespace NPay.Modules.Wallets.Core.Wallets.Repositories;
 
 internal interface IWalletRepository
 {
-    Task<Wallet> GetAsync(WalletId id);
-    Task<Wallet> GetAsync(OwnerId ownerId, Currency currency);
-    Task AddAsync(Wallet wallet);
-    Task UpdateAsync(Wallet wallet);
+    internal Task<Wallet> GetAsync(WalletId id);
+    internal Task<Wallet> GetAsync(OwnerId ownerId, Currency currency);
+    internal Task AddAsync(Wallet wallet);
+    internal Task UpdateAsync(Wallet wallet);
 }

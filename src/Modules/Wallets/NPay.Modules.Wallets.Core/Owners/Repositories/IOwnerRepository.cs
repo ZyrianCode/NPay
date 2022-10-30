@@ -6,7 +6,7 @@ namespace NPay.Modules.Wallets.Core.Owners.Repositories;
 
 internal interface IOwnerRepository
 {
-    Task<Owner> GetAsync(OwnerId id);
-    Task AddAsync(Owner owner);
-    Task UpdateAsync(Owner owner);
+    internal Task<Owner> GetAsync(OwnerId id);
+    internal Task AddAsync(Owner owner);
+    internal Task UpdateAsync(Owner owner);
 }
