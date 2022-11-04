@@ -17,7 +17,7 @@
     },
     "NPay.Bootstrapper": {
       "commandName": "Project",
-      "dotnetRunMessages": "true",
+      "dotnetRunMessages": true,
       "launchBrowser": false,
       "applicationUrl": "http://localhost:5000",
       "environmentVariables": {

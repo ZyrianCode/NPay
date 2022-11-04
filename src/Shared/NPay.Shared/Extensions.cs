@@ -28,8 +28,9 @@ public static class Extensions
         services.AddMessaging();
         services.AddPostgres(configuration);
         services.AddControllers();
-        services.AddSingleton<IClock, UtcClock>();
-        services.AddSingleton<IDispatcher, InMemoryDispatcher>();
+        services.AddClock();
+        services.AddDispatchers();
+
         services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
         services.AddSwaggerGen(swagger =>
         {
