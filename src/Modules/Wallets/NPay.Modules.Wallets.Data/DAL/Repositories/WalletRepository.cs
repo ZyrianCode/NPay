@@ -13,7 +13,7 @@ internal class WalletRepository : IWalletRepository
     private readonly WalletsDbContext _context;
     private readonly DbSet<Wallet> _wallets;
         
-    public WalletRepository(WalletsDbContext context)
+    internal WalletRepository(WalletsDbContext context)
     {
         _context = context;
         _wallets = _context.Wallets;

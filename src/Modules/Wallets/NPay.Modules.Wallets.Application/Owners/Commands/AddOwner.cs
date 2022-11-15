@@ -38,14 +38,16 @@ public sealed class AddOwner
                 throw new UserNotFoundException(command.Email);
             }
 
-            if (await _ownerRepository.GetAsync(user.UserId) is not null)
+            var owner = await _ownerRepository.GetAsync(user.UserId);
+
+            if (owner is not null)
             {
                 throw new OwnerAlreadyExistsException(command.Email);
             }
 
             var now = _clock.CurrentDate();
-            var owner = new Owner(user.UserId, user.FullName, user.Nationality, now);
-            await _ownerRepository.AddAsync(owner);
+            var newOwner = new Owner(user.UserId, user.FullName, user.Nationality, now);
+            await _ownerRepository.AddAsync(newOwner);
             _logger.LogInformation($"Created an owner for the user with ID: '{user.UserId}'.");
         }
     }

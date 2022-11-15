@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using NPay.Modules.Wallets.Core.Abstractions.SharedKernel;
 using NPay.Modules.Wallets.Core.SharedKernel;
 using NPay.Modules.Wallets.Core.Wallets.Entities;
 using NPay.Modules.Wallets.Core.Wallets.Exceptions;

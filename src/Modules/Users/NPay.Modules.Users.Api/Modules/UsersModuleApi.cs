@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
-using NPay.Modules.Users.Core.Abstractions.Services;
+using NPay.Modules.Users.Application.Services;
 using NPay.Modules.Users.Shared;
 using NPay.Modules.Users.Shared.DTO;
 

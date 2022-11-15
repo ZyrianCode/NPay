@@ -18,5 +18,6 @@ using System.Runtime.InteropServices;
 
 [assembly: Guid("aae26faa-086b-413e-85f9-6bd2abd3e665")]
 
+[assembly: InternalsVisibleTo("NPay.Modules.Users.Application")]
 [assembly: InternalsVisibleTo("NPay.Modules.Users.Data")]
-[assembly: InternalsVisibleTo("NPay.Modules.Users.Services")]
+[assembly: InternalsVisibleTo("NPay.Modules.Users.Api")]

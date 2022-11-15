@@ -1,5 +1,5 @@
 using System.Threading.Tasks;
-using NPay.Modules.Notifications.Core.Abstractions.Services;
+using NPay.Modules.Notifications.Application.Services;
 using NPay.Modules.Notifications.Shared;
 
 namespace NPay.Modules.Notifications.Api.Modules;

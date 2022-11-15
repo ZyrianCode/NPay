@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NPay.Modules.Notifications.Core.Abstractions\NPay.Modules.Notifications.Core.Abstractions.csproj" />
+    <ProjectReference Include="..\NPay.Modules.Notifications.Shared\NPay.Modules.Notifications.Shared.csproj" />
   </ItemGroup>
 
 </Project>

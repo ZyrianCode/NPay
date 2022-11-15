@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using NPay.Modules.Users.Shared.Events;
 using NPay.Modules.Wallets.Application.Owners.Exceptions;
+
 using NPay.Modules.Wallets.Core.Owners.Aggregates;
 using NPay.Modules.Wallets.Core.Owners.Repositories;
 using NPay.Shared.Events;

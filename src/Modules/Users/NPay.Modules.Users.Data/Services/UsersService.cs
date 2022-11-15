@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using NPay.Modules.Users.Core.Abstractions.Services;
+using NPay.Modules.Users.Application.Maps;
+using NPay.Modules.Users.Application.Services;
 using NPay.Modules.Users.Core.Entities;
 using NPay.Modules.Users.Core.Exceptions;
 using NPay.Modules.Users.Data.DAL.Contexts;
@@ -33,7 +34,7 @@ internal sealed class UsersService : IUsersService
 
         // TODO: Make use of custom mapping interface or AutoMapper, Mapster etc.
 
-        return user is null ? null : MapToDetailsDto(user);
+        return user is null ? null : user.MapToDetailsDto();
     }
 
     async Task<UserDetailsDto> IUsersService.GetAsync(string email)
@@ -47,7 +48,7 @@ internal sealed class UsersService : IUsersService
 
         var user = await _dbContext.Users.SingleOrDefaultAsync(x => x.Email == email);
 
-        return user is null ? null : MapToDetailsDto(user);
+        return user is null ? null : user.MapToDetailsDto();
     }
 
     async Task<IReadOnlyList<UserDto>> IUsersService.BrowseAsync()
@@ -56,7 +57,7 @@ internal sealed class UsersService : IUsersService
 
         // TODO: Implement pagination, sorting etc.
 
-        return users.Select(MapToDto).ToList();
+        return users.Select(x => x.MapToDto()).ToList();
     }
 
     async Task IUsersService.AddAsync(UserDetailsDto dto)
@@ -100,28 +101,4 @@ internal sealed class UsersService : IUsersService
         await _messageBroker.PublishAsync(new UserVerified(user.Id, user.Email, user.Nationality));
         _logger.LogInformation($"Verified the user with ID: '{user.Id}'.");
     }
-
-    // TODO: Extract to the dedicated "mapper" interfaces or extension methods
-
-    private static UserDto MapToDto(User user) => Map<UserDto>(user);
-
-    private static UserDetailsDto MapToDetailsDto(User user)
-    {
-        var dto = Map<UserDetailsDto>(user);
-        dto.Address = user.Address;
-        dto.Identity = user.Identity;
-
-        return dto;
-    }
-
-    private static T Map<T>(User user) where T : UserDto, new()
-        => new()
-        {
-            UserId = user.Id,
-            Email = user.Email,
-            FullName = user.FullName,
-            Nationality = user.Nationality,
-            State = user.VerifiedAt.HasValue ? "verified" : "unverified",
-            CreatedAt = user.CreatedAt
-        };
 }

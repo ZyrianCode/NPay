@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Threading;
 using System.Threading.Tasks;
-using NPay.Modules.Wallets.Application.Abstractions.Storage;
+using NPay.Modules.Wallets.Application.Wallets.Maps;
+using NPay.Modules.Wallets.Application.Wallets.Storage;
 using NPay.Modules.Wallets.Shared.DTO;
 using NPay.Shared.Queries;
 

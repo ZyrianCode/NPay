@@ -5,8 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NPay.Modules.Notifications.Core.Abstractions\NPay.Modules.Notifications.Core.Abstractions.csproj" />
+    <ProjectReference Include="..\NPay.Modules.Notifications.Application\NPay.Modules.Notifications.Application.csproj" />
     <ProjectReference Include="..\NPay.Modules.Notifications.Core\NPay.Modules.Notifications.Core.csproj" />
+    <ProjectReference Include="..\NPay.Modules.Notifications.Data\NPay.Modules.Notifications.Data.csproj" />
     <ProjectReference Include="..\NPay.Modules.Notifications.Shared\NPay.Modules.Notifications.Shared.csproj" />
   </ItemGroup>
 

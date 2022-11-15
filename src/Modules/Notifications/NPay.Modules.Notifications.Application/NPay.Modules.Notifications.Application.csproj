@@ -9,7 +9,6 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Users\NPay.Modules.Users.Shared\NPay.Modules.Users.Shared.csproj" />
     <ProjectReference Include="..\..\Wallets\NPay.Modules.Wallets.Shared\NPay.Modules.Wallets.Shared.csproj" />
-    <ProjectReference Include="..\NPay.Modules.Notifications.Core.Abstractions\NPay.Modules.Notifications.Core.Abstractions.csproj" />
   </ItemGroup>
 
 </Project>

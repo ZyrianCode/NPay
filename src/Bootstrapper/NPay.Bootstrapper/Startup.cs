@@ -3,9 +3,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using NPay.Modules.Notifications.Api;
-using NPay.Modules.Users.Api;
-using NPay.Modules.Wallets.Api;
+using NPay.Modules.Notifications.Api.Extensions;
+using NPay.Modules.Users.Api.Extensions;
+using NPay.Modules.Wallets.Api.Extensions;
 using NPay.Shared;
 
 namespace NPay.Bootstrapper;
@@ -21,6 +21,7 @@ public class Startup
         
     public void ConfigureServices(IServiceCollection services)
     {
+        
         services.AddNotificationsModule();
         services.AddUsersModule();
         services.AddWalletsModule();

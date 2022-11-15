@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NPay.Modules.Wallets.Application.Abstractions\NPay.Modules.Wallets.Application.Abstractions.csproj" />
     <ProjectReference Include="..\NPay.Modules.Wallets.Application\NPay.Modules.Wallets.Application.csproj" />
   </ItemGroup>
 

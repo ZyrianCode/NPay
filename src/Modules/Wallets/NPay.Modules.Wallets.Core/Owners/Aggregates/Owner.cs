@@ -1,5 +1,4 @@
 ﻿using System;
-using NPay.Modules.Wallets.Core.Abstractions.SharedKernel;
 using NPay.Modules.Wallets.Core.Owners.ValueObjects;
 using NPay.Modules.Wallets.Core.SharedKernel;
 
@@ -17,7 +16,7 @@ internal class Owner : AggregateRoot<OwnerId>
     {
     }
 
-    public Owner(OwnerId id, FullName fullName, Nationality nationality, DateTime createdAt)
+    internal Owner(OwnerId id, FullName fullName, Nationality nationality, DateTime createdAt)
     {
         Id = id;
         FullName = fullName;

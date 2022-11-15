@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NPay.Modules.Users.Core.Abstractions\NPay.Modules.Users.Core.Abstractions.csproj" />
+    <ProjectReference Include="..\NPay.Modules.Users.Application\NPay.Modules.Users.Application.csproj" />
     <ProjectReference Include="..\NPay.Modules.Users.Core\NPay.Modules.Users.Core.csproj" />
   </ItemGroup>
 

@@ -18,6 +18,7 @@ using System.Runtime.InteropServices;
 
 [assembly: Guid("64c519da-44bb-4606-83c9-4ad78aae5e98")]
 
+
 [assembly: InternalsVisibleTo("NPay.Modules.Wallets.Application")]
-[assembly: InternalsVisibleTo("NPay.Modules.Wallets.Application.Abstractions")]
 [assembly: InternalsVisibleTo("NPay.Modules.Wallets.Data")]
+[assembly: InternalsVisibleTo("NPay.Modules.Wallets.Api")]

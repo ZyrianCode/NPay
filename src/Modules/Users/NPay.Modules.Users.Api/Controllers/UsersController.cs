@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using NPay.Modules.Users.Core.Abstractions.Services;
+using NPay.Modules.Users.Application.Services;
 using NPay.Modules.Users.Shared.DTO;
 using Swashbuckle.AspNetCore.Annotations;
 

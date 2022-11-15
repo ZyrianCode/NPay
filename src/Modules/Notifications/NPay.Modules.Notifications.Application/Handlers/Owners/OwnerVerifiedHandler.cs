@@ -1,4 +1,4 @@
-﻿using NPay.Modules.Notifications.Core.Abstractions.Services;
+﻿using NPay.Modules.Notifications.Application.Services;
 using NPay.Modules.Wallets.Shared.Events;
 using NPay.Shared.Events;
 

@@ -12,13 +12,13 @@ internal class OwnerRepository : IOwnerRepository
     private readonly WalletsDbContext _context;
     private readonly DbSet<Owner> _owners;
 
-    public OwnerRepository(WalletsDbContext context)
+    internal OwnerRepository(WalletsDbContext context)
     {
         _context = context;
         _owners = _context.Owners;
     }
 
-    Task<Owner> IOwnerRepository.GetAsync(OwnerId id)
+     Task<Owner> IOwnerRepository.GetAsync(OwnerId id)
         => _owners.SingleOrDefaultAsync(x => x.Id.Equals(id));
 
     async Task IOwnerRepository.AddAsync(Owner owner)
